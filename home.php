@@ -46,9 +46,8 @@ session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
  ?>
-<!DOCTYPE html>
-<html>
-<body>
+
+
      <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
 	 <h1>Please select an action.</h1>
 	 <br><br><br>
@@ -96,8 +95,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 	</div>
 	 <br><br><br>
      <a href="Logout.php">Logout</a>
-</body>
-</html>
+
 
 <?php 
 }else{
