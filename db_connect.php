@@ -1,12 +1,7 @@
 <?php
 
-//variabile sa ma conectez la baza de date
-$host = "localhost";
-$username = "root";
-$user_pass = "root";
-$database_in_use = "festivaldb";
-
-//creaza conectarea la baza de date
-$mysqli = new mysqli($host, $username , $user_pass, $database_in_use);
+$con = mysqli_init();
+mysqli_options($db, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, false);
+mysqli_real_connect($conn, "ebusiness.mysql.database.azure.com", "gabosman", "Capdecal-70", "Capdecal-70", 3306, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT);
 
 ?>
