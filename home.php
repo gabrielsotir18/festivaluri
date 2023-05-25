@@ -22,7 +22,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+session_start();
 include "db_connect.php";
 ?>
 
@@ -45,7 +45,7 @@ include "db_connect.php";
 	<link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <?php 
-session_start();
+
 
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
