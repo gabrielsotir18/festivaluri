@@ -34,7 +34,9 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             	$_SESSION['user_name'] = $row['user_name'];
             	$_SESSION['name'] = $row['name'];
             	$_SESSION['id'] = $row['id'];
-            	header("Location: home.php");
+            	$URL="home.php";
+				echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+				echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 		        exit();
             }else{
 				header("Location: LoginPage.php?error=Incorect User name or password");
