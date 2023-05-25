@@ -61,17 +61,16 @@ include "db_connect.php";
         $password = "root";
         $dbname = "festivaldb";
 
-        // Create a connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        include "db_connect.php";
 
         // Check the connection
-        if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
+        if ($mysqli->connect_error) {
+          die("Connection failed: " . $mysqli->connect_error);
         }
 
         // Query the database to fetch the data
         $sql = "SELECT tipBilet, COUNT(*) FROM tblBilete GROUP BY tipBilet";
-        $result = $conn->query($sql);
+        $result = $mysqli->query($sql);
 
         // Populate the data table with the fetched data
         if ($result->num_rows > 0) {
@@ -81,7 +80,7 @@ include "db_connect.php";
         }
 
         // Close the connection
-        $conn->close();
+        $mysqli->close();
       ?>
 
       // Set chart options
@@ -100,9 +99,6 @@ include "db_connect.php";
 </head>
 <?php 
 session_start();
-
-if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -118,10 +114,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </html>
 
 <?php 
-}else{
-     header("Location: index.php");
-     exit();
-}
+
  ?>
 
 

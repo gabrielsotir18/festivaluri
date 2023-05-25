@@ -106,8 +106,6 @@ include "db_connect.php";
 <?php 
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -122,12 +120,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 </body>
 </html>
 
-<?php 
-}else{
-     header("Location: index.php");
-     exit();
-}
- ?>
 
 
 <!-- END MAIN -->
