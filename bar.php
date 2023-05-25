@@ -56,6 +56,7 @@ include "db_connect.php";
       // Fetch data from the database (assuming you have a MySQL connection)
       <?php
         // Replace the database credentials with your own
+        include "db_connect.php";
         $servername = "localhost";
         $username = "root";
         $password = "root";
@@ -65,8 +66,8 @@ include "db_connect.php";
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         // Check the connection
-        if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
+        if ($mysqli->connect_error) {
+          die("Connection failed: " . $mysqli->connect_error);
         }
 
         // Query the database to fetch the data
@@ -74,7 +75,7 @@ include "db_connect.php";
         JOIN tblEditiiFestivaluri ON tblFestivaluri.idFestival = tblEditiiFestivaluri.festival
         JOIN tblBilete ON tblEditiiFestivaluri.idEditie = tblBilete.editie
         GROUP BY tblFestivaluri.numeFestival) AS tabelSume ORDER BY sumaBiletelor DESC";
-        $result = $conn->query($sql);
+        $result = $mysqli->query($sql);
 
         // Populate the data table with the fetched data
         if ($result->num_rows > 0) {
@@ -84,7 +85,7 @@ include "db_connect.php";
         }
 
         // Close the connection
-        $conn->close();
+        $mysqli->close();
       ?>
 
       // Set chart options
