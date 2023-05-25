@@ -37,6 +37,8 @@ include "db_connect.php";
 <head>
 	<title>LOGIN</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>HOME</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <?php 
 session_start();
@@ -46,10 +48,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
  ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title>HOME</title>
-	<link rel="stylesheet" type="text/css" href="style2.css">
-</head>
 <body>
      <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
 	 <h1>Please select an action.</h1>
