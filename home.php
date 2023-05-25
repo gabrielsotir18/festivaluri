@@ -103,7 +103,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 <?php 
 }else{
-     header("Location: index.php");
+	<script type="text/javascript">
+	window.location.href = '/index.php';
+	</script>
      exit();
 }
  ?>
