@@ -104,7 +104,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <?php 
 }else{
 	<script type="text/javascript">
-	window.location.href = '/index.php';
+	window.location.href = 'index.php';
 	</script>
      exit();
 }
