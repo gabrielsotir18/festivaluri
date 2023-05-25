@@ -18,13 +18,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 }
 </style>
 <body>
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-
-?>
 
 <!-- Navbar -->
 <div class="w3-top">
