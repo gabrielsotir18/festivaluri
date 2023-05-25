@@ -38,7 +38,7 @@
   session_start();
   include "db_connect.php";
 
-  if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+//   if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
   ?>
   <div class="content">
     <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
@@ -94,10 +94,10 @@
     </div>
   </div>
   <?php
-  } else {
-    header("Location: index.php");
-    exit();
-  }
+//   } else {
+//     header("Location: index.php");
+//     exit();
+//   }
   ?>
 
   <!-- Scripts -->
