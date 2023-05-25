@@ -4,7 +4,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-session_start();
+// session_start();
 include "db_connect.php";
 ?>
 <title>W3.CSS Template</title>
@@ -103,9 +103,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 <?php 
 }else{
-	<script type="text/javascript">
-	window.location.href = 'index.php';
-	</script>
+     header("Location: index.php");
      exit();
 }
  ?>
