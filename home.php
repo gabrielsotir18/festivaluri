@@ -23,7 +23,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include "db_connect.php";
+
 ?>
 
 <!-- Navbar -->
@@ -46,7 +46,7 @@ include "db_connect.php";
 </head>
 <?php 
 session_start();
-
+include "db_connect.php";
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
  ?>
@@ -103,7 +103,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 <?php 
 }else{
-    //  header("Location: index.php");
+     header("Location: index.php");
      exit();
 }
  ?>
