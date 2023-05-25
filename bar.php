@@ -18,9 +18,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 }
 </style>
 <body>
-<?php
-include "db_connect.php";
-?>
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -62,9 +59,6 @@ include "db_connect.php";
         $password = "root";
         $dbname = "festivaldb";
 
-        // Create a connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
         // Check the connection
         if ($mysqli->connect_error) {
           die("Connection failed: " . $mysqli->connect_error);
@@ -103,10 +97,7 @@ include "db_connect.php";
   </script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<?php 
-session_start();
 
- ?>
 <!DOCTYPE html>
 <html>
 
